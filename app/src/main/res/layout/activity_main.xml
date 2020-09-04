@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/tableLayoutId"
+    android:padding="15sp"
     tools:context=".MainActivity">
-
-    <TableLayout
-        android:id="@+id/tableLayoutId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        tools:ignore="MissingConstraints">
 
         <TableRow>
             <EditText
                 android:id="@+id/editText1"
-                android:layout_width="380dp"
-                android:layout_height="match_parent"
-                android:hint="Enter Android Version" />
+                android:layout_height="wrap_content"
+                android:hint="Enter Android Version"
+                android:layout_span="2"/>
         </TableRow>
 
         <TableRow>
-
             <EditText
                 android:id="@+id/editText2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Android Code Name" />
+                android:layout_width="wrap_content"
+                android:hint="Enter Android Code Name"
+                android:layout_span="2"/>
         </TableRow>
 
         <TableRow>
             <Button
                 android:id="@+id/add_button"
+                android:onClick="click"
                 android:text="ADD"
-                android:onClick="click" />
+                android:layout_span="2"/>
         </TableRow>
 
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp"
-        android:layout_marginTop="150dp">
         <TableRow>
             <TextView
                 android:layout_width="190dp"
@@ -89,33 +77,31 @@
 
             <TextView
                 android:layout_width="190dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="#FF6161"
                 android:text="Oreo" />
         </TableRow>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp"/>
+<!--        <Space-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="8dp"/>-->
 
         <TableRow
             android:id="@+id/table_row"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:orientation="vertical" >
 
             <TextView
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv1"
-                android:layout_column="0"/>
+                android:layout_column="0" />
 
             <TextView
                 android:layout_width="190dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/tv2"
-                android:layout_column="1"/>
+                android:layout_column="1" />
         </TableRow>
 
-    </TableLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TableLayout>
