@@ -29,19 +29,23 @@ class MainActivity : AppCompatActivity() {
         tableRow.setLayoutParams(layoutParams)
 
         // Add values into the row by calling addView()
-        val textView1 = TextView(context)
-        textView1.setText(editText1.text.toString())
-        textView1.setBackgroundResource(R.color.rowColor)
-        tableRow.addView(textView1, 0)
+        if (!editText1.text.toString().isEmpty() && !editText2.text.toString().isEmpty()) {
+            val textView1 = TextView(context)
+            textView1.setText(editText1.text.toString())
+            textView1.setBackgroundResource(R.color.rowColor)
+            tableRow.addView(textView1, 0)
 
-        val textView2 = TextView(context)
-        textView2.setText(editText2.text.toString())
-        textView2.setBackgroundResource(R.color.rowColor)
-        tableRow.addView(textView2,1)
+            val textView2 = TextView(context)
+            textView2.setText(editText2.text.toString())
+            textView2.setBackgroundResource(R.color.rowColor)
+            tableRow.addView(textView2, 1)
 
-        // Add the created row into the layout
-        tableLayoutId.addView(tableRow)
+            // Add the created row into the layout
+            tableLayoutId.addView(tableRow)
 
+            editText1.getText().clear()
+            editText2.getText().clear()
+        }
     }
 }
 

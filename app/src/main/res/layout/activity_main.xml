@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tableLayoutId"
-    android:padding="15sp"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
         <TableRow>
@@ -32,7 +32,8 @@
                 android:layout_span="2"/>
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
@@ -46,11 +47,8 @@
                 android:text="Code name" />
         </TableRow>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp"/>
-
-        <TableRow>
+        <TableRow
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
@@ -64,11 +62,8 @@
                 android:text="Pie" />
         </TableRow>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp"/>
-
-        <TableRow>
+        <TableRow
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
@@ -82,14 +77,8 @@
                 android:text="Oreo" />
         </TableRow>
 
-<!--        <Space-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="8dp"/>-->
-
         <TableRow
-            android:id="@+id/table_row"
-            android:orientation="vertical" >
-
+            android:id="@+id/table_row">
             <TextView
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
@@ -102,6 +91,5 @@
                 android:id="@+id/tv2"
                 android:layout_column="1" />
         </TableRow>
-
 
 </TableLayout>
